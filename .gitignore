@@ -155,6 +155,4 @@ results/
 *.py
 *.ipynb
 !data/README.md
-LICENSE
 requirements.txt
-CITATION.cff 

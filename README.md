@@ -6,7 +6,7 @@ Soft-bodied robots present unique modeling and control challenges due to their h
 
 ## AML Journal Submission
 
-This repository accompanies our submission to the **Applied Machine Learning (AML) Journal**. The code implements Reservoir Computing (RC) with Echo State Networks (ESN) for digital twin modeling and optimal control of spring-mass systems representing soft robotics applications.
+This repository contains the **data portion** of our submission to the **Applied Machine Learning (AML) Journal**. The data supports research on Reservoir Computing (RC) with Echo State Networks (ESN) for digital twin modeling and optimal control of spring-mass systems representing soft robotics applications.
 
 ## Authors
 
@@ -24,43 +24,32 @@ This repository accompanies our submission to the **Applied Machine Learning (AM
 ├── LICENSE                      # MIT License
 ├── requirements.txt             # Python dependencies
 ├── .gitignore                  # Git ignore file
-├── 📁 data/                    # Sample data and data loading scripts
+├── 📁 data/                    # Research data and datasets
 │   ├── README.md              # Data description and access instructions
-│   └── sample_data.csv        # Sample spring-mass system data
-├── 📁 src/                     # Source code
-│   ├── __init__.py
-│   ├── models/                # Reservoir Computing models
-│   │   ├── __init__.py
-│   │   ├── esn.py            # Echo State Network implementation
-│   │   └── reservoir.py      # Reservoir Computing base class
-│   ├── simulation/            # Spring-mass system simulation
-│   │   ├── __init__.py
-│   │   ├── spring_mass.py    # Spring-mass system dynamics
-│   │   └── controller.py     # Control mechanisms
-│   └── utils/                 # Utility functions
-│       ├── __init__.py
-│       ├── data_processing.py # Data preprocessing
-│       └── visualization.py   # Plotting utilities
-├── 📁 notebooks/              # Jupyter notebooks for analysis
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_model_training.ipynb
-│   ├── 03_control_evaluation.ipynb
-│   └── 04_results_analysis.ipynb
+│   ├── sample_data.csv        # Sample spring-mass system data
+│   ├── training_data/         # Training datasets
+│   ├── validation_data/       # Validation datasets
+│   └── test_data/            # Test datasets
 ├── 📁 results/                # Output results and figures
-│   ├── models/               # Trained model files
+│   ├── models/               # Trained model files (if available)
 │   └── plots/               # Generated figures
 │       ├── fig1.png
 │       └── fig2.png
-├── 📁 scripts/               # Training and evaluation scripts
-│   ├── train_model.py       # Model training script
-│   ├── evaluate_control.py  # Control evaluation script
-│   └── generate_plots.py    # Plot generation script
-├── 📁 tests/                # Unit tests
-│   ├── __init__.py
-│   ├── test_models.py
-│   └── test_simulation.py
+├── 📁 notebooks/              # Jupyter notebooks for data analysis
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_data_analysis.ipynb
+│   └── 03_results_visualization.ipynb
 └── 📄 CITATION.cff          # Citation information
 ```
+
+## Data Description
+
+This repository contains the datasets used in our research on digital twin modeling and optimal control of spring-mass systems. The data includes:
+
+- **Spring-mass system simulation data** from 20-node, 54-spring configurations
+- **Training, validation, and test datasets** for Reservoir Computing models
+- **Control performance metrics** and evaluation data
+- **Visualization outputs** and analysis results
 
 ## Environment Setup
 
@@ -88,20 +77,17 @@ This repository accompanies our submission to the **Applied Machine Learning (AM
    pip install -r requirements.txt
    ```
 
-## Quick Start
+## Data Access
 
-### Running the Simulation
+### Sample Data
 
-```bash
-# Train the Reservoir Computing model
-python scripts/train_model.py --data_path data/sample_data.csv --output_dir results/models/
+The `data/` directory contains sample spring-mass system data that can be used for initial exploration and testing.
 
-# Evaluate control performance
-python scripts/evaluate_control.py --model_path results/models/esn_model.pkl
+### Full Dataset
 
-# Generate plots
-python scripts/generate_plots.py --results_dir results/plots/
-```
+For access to the complete dataset used in our experiments, please refer to the data README file in the `data/` directory.
+
+## Data Analysis
 
 ### Jupyter Notebooks
 
@@ -111,14 +97,9 @@ python scripts/generate_plots.py --results_dir results/plots/
    ```
 
 2. Open notebooks in order:
-   - `notebooks/01_data_exploration.ipynb` - Data analysis
-   - `notebooks/02_model_training.ipynb` - Model training
-   - `notebooks/03_control_evaluation.ipynb` - Control evaluation
-   - `notebooks/04_results_analysis.ipynb` - Results analysis
-
-## Data
-
-The `data/` directory contains sample spring-mass system data. For the full dataset used in our experiments, please refer to the data README file.
+   - `notebooks/01_data_exploration.ipynb` - Initial data exploration
+   - `notebooks/02_data_analysis.ipynb` - Detailed data analysis
+   - `notebooks/03_results_visualization.ipynb` - Results visualization
 
 ## Key Results
 
@@ -129,7 +110,7 @@ The `data/` directory contains sample spring-mass system data. For the full data
 
 ## Citation
 
-If you use this code in your research, please cite our paper:
+If you use this data in your research, please cite our paper:
 
 ```bibtex
 @article{cain2024digital,
@@ -146,7 +127,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For questions about this implementation, please contact:
+For questions about this data or research, please contact:
 - **Osemudiamen Andrew Ihimekpen**: oihimekpen@pvamu.edu
 - **Jovan Cain**: jcain5@pvamu.edu
 

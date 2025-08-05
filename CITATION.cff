@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+title: "Digital Twin Modeling and Optimal Control of Spring-Mass Systems Using Reservoir Computing"
+authors:
+  - family-names: Cain
+    given-names: Jovan
+    email: jcain5@pvamu.edu
+    affiliation: "Department of Electrical and Computer Engineering and CREDIT Center, Prairie View A&M University"
+  - family-names: Ihimekpen
+    given-names: Osemudiamen Andrew
+    email: oihimekpen@pvamu.edu
+    affiliation: "Department of Electrical and Computer Engineering and CREDIT Center, Prairie View A&M University"
+  - family-names: Li
+    given-names: Xiangfang
+    email: xili@pvamu.edu
+    affiliation: "Department of Electrical and Computer Engineering and CREDIT Center, Prairie View A&M University"
+  - family-names: Haile
+    given-names: Mulugeta
+    email: mulugeta.a.haile.civ@army.mil
+    affiliation: "U.S. Army Research Laboratory"
+  - family-names: Qian
+    given-names: Lijun
+    email: liqian@pvamu.edu
+    affiliation: "Department of Electrical and Computer Engineering and CREDIT Center, Prairie View A&M University"
+doi: 10.xxxx/xxxx
+date-released: 2024-12-19
+repository-code: "https://github.com/Ihimekpen/ModelAndControlMSD"
+keywords:
+  - "Reservoir Computing"
+  - "Echo State Networks"
+  - "Digital Twin"
+  - "Spring-Mass Systems"
+  - "Soft Robotics"
+  - "Optimal Control"
+  - "Machine Learning"
+  - "Nonlinear Dynamics"
+license: MIT
+message: "If you use this software, please cite it using the metadata from this file." 
