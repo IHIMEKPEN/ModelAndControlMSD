@@ -26,19 +26,33 @@ This repository contains the **data portion** of our submission to the **Applied
 ├── .gitignore                  # Git ignore file
 ├── 📁 data/                    # Research data and datasets
 │   ├── README.md              # Data description and access instructions
-│   ├── sample_data.csv        # Sample spring-mass system data
-│   ├── training_data/         # Training datasets
-│   ├── validation_data/       # Validation datasets
-│   └── test_data/            # Test datasets
-├── 📁 results/                # Output results and figures
-│   ├── models/               # Trained model files (if available)
-│   └── plots/               # Generated figures
-│       ├── fig1.png
-│       └── fig2.png
-├── 📁 notebooks/              # Jupyter notebooks for data analysis
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_data_analysis.ipynb
-│   └── 03_results_visualization.ipynb
+│   ├── 📁 node5spring9/       # 5-node, 9-spring system data
+│   │   └── 1/dynamic/
+│   │       ├── control.csv    # Control signals data
+│   │       ├── speed.csv      # Node velocities data
+│   │       ├── pos.csv        # Node positions data
+│   │       └── acc.csv        # Node accelerations data
+│   ├── 📁 node10spring24 v1=4 v2=2/  # 10-node, 24-spring system data
+│   │   └── 1/dynamic/
+│   │       ├── control.csv    # Control signals data
+│   │       ├── speed.csv      # Node velocities data
+│   │       ├── pos.csv        # Node positions data
+│   │       └── acc.csv        # Node accelerations data
+│   └── 📁 plots/              # Generated visualization plots
+│       ├── 📁 plots_2000_timesteps/
+│       │   └── 📁 node5spring9/dynamic/
+│       │       ├── node_1_x_position.png
+│       │       ├── node_1_y_position.png
+│       │       ├── node_1_x_speed.png
+│       │       ├── node_1_y_speed.png
+│       │       ├── node_1_x_acc.png
+│       │       ├── node_1_y_acc.png
+│       │       ├── ... (similar files for nodes 2-5)
+│       │       ├── control_spring_length_1.png
+│       │       ├── control_spring_length_2.png
+│       │       ├── ... (similar files for springs 3-9)
+│       └── 📁 plots_20000_timesteps/
+│           └── (similar structure for longer simulations)
 └── 📄 CITATION.cff          # Citation information
 ```
 
@@ -46,10 +60,44 @@ This repository contains the **data portion** of our submission to the **Applied
 
 This repository contains the datasets used in our research on digital twin modeling and optimal control of spring-mass systems. The data includes:
 
-- **Spring-mass system simulation data** from 20-node, 54-spring configurations
-- **Training, validation, and test datasets** for Reservoir Computing models
-- **Control performance metrics** and evaluation data
-- **Visualization outputs** and analysis results
+### Available Datasets
+
+1. **5-Node, 9-Spring System** (`node5spring9/`)
+   - Position data (pos.csv) - 17MB
+   - Velocity data (speed.csv) - 18MB  
+   - Acceleration data (acc.csv) - 18MB
+   - Control signals (control.csv) - 16MB
+
+2. **10-Node, 24-Spring System** (`node10spring24/`)
+   - Position data (pos.csv) - 32MB
+   - Velocity data (speed.csv) - 37MB
+   - Acceleration data (acc.csv) - 36MB
+   - Control signals (control.csv) - 43MB
+
+### Data Format
+
+Each dataset contains time series data with the following structure:
+- **Position data**: Node positions in x and y coordinates over time
+- **Velocity data**: Node velocities in x and y directions over time
+- **Acceleration data**: Node accelerations in x and y directions over time
+- **Control data**: Applied control signals and spring dynamics over time
+
+### Visualization Plots
+
+The repository includes comprehensive visualization plots for:
+- **Node dynamics**: Position, velocity, and acceleration plots for each node
+- **Spring control**: Spring length and force dynamics for each spring
+- **Time scales**: Both 2000 and 20000 timestep simulations
+
+### Data Access
+
+The complete dataset used in our experiments contains:
+- **5 and 10-node spring-mass system simulations** (referenced in paper)
+- **9 and 24 springs with nonlinear dynamics**
+- **Time series data for position, velocity, and acceleration**
+
+
+For access to the full 20-node dataset used in our experiments, please contact the authors as described in the data README file.
 
 ## Environment Setup
 
@@ -79,13 +127,15 @@ This repository contains the datasets used in our research on digital twin model
 
 ## Data Access
 
-### Sample Data
+### Available Data
 
-The `data/` directory contains sample spring-mass system data that can be used for initial exploration and testing.
+The `data/` directory contains two complete spring-mass system datasets:
+- **5-node, 9-spring system** with full dynamic simulation data
+- **10-node, 24-spring system** with comprehensive control and response data
 
 ### Full Dataset
 
-For access to the complete dataset used in our experiments, please refer to the data README file in the `data/` directory.
+For access to the complete 20-node, 54-spring dataset used in our experiments, please refer to the data README file in the `data/` directory or contact the authors.
 
 ## Data Analysis
 
