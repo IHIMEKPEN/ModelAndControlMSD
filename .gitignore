@@ -154,7 +154,6 @@ notebooks/
 results/
 *.py
 *.ipynb
-*.md
 !data/README.md
 LICENSE
 requirements.txt
